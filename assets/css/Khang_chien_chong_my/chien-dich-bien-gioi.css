@@ -3,6 +3,13 @@ p {
     line-height: 1.7;
 }
 
+.body-page .col-10 .content-page {
+    background-color: #faf6f1;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
 .wrapper-image .image-box .image-caption {
     text-align: center;
     font-size: 14px;

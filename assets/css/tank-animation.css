@@ -1,0 +1,58 @@
+.tank-animation-container {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.tank-animation-text {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  opacity: 0;
+  transition: opacity 0.3s;
+  -webkit-mask-image: linear-gradient(to right, transparent, black);
+  mask-image: linear-gradient(to right, transparent, black);
+  -webkit-mask-size: 200% 100%;
+  mask-size: 200% 100%;
+  -webkit-mask-position: 100% 0;
+  mask-position: 100% 0;
+  transition: -webkit-mask-position 5s linear;
+  transition: mask-position 5s linear;
+  line-height: 50px;
+}
+
+.tank-animation-tank {
+  position: absolute;
+  width: 50px;
+  height: 40px;
+  background-image: url('/BestWebDesign/assets/img/chung/tank.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: -50px;
+  top: 5px;
+  animation: tankMove 5s linear forwards;
+  z-index: 2;
+}
+
+@keyframes tankMove {
+  0% {
+    left: -50px;
+  }
+  100% {
+    left: calc(100% + 50px);
+  }
+}
+
+.tank-animation-text.visible {
+  opacity: 1;
+}
+
+.tank-animation-text.reveal {
+  -webkit-mask-position: 0 0;
+  mask-position: 0 0;
+} 
